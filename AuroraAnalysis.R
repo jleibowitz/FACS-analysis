@@ -6,6 +6,8 @@ library(pheatmap)
 #reading in sample metadata and antibody panel information
 md<-read_excel("metaData.xlsx")
 md$condition<-factor(md$condition,levels=c("naïve","SOD","KO"))
+md$patient_id<-factor(md$patient_id,levels=c("naïve_27","naïve_29","naïve_34","SOD_20","SOD_23","SOD_30","KO_25","KO_31","KO_33"))
+
 
 color_conditions <- c("#6A3D9A", "#FF7F00","#DC050C")
 names(color_conditions) <- levels(md$condition)
