@@ -39,7 +39,7 @@ sort.final<-centered_data[order(annotate_row$Cluster),]
 #annotate_row<-annotate_row[order(annotate_row$Cluster),]
 
 breaksList<-seq(-2, 2, by = 0.25)
-annotation_colors<-c("#FDB462","#E6AB02","#33A02C","#7BAFDE","#E7298A","#882E72","#DC050C") #order by unique(annotate_row)
+annotation_colors<-c(color_clusters[as.numeric(as.character(unique(annotate_row)[[1]]))]) #order by unique(annotate_row)
 names(annotation_colors)<-unique(annotate_row)[,1]
 my_color<-list(Cluster=annotation_colors)
 
